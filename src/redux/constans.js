@@ -1,0 +1,6 @@
+export const actionTypes = {
+  GET_ROUTE: 'GET_ROUTE',
+  DELETE_ROUTE: 'DELETE_ROUTE',
+  SET_ROUTE: 'SET_ROUTE',
+  REMOVE_ROUTE: 'REMOVE_ROUTE',
+};
