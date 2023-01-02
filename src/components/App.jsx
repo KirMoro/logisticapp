@@ -1,7 +1,7 @@
 import { Col, Layout, Row } from 'antd';
 import { Content, Header } from 'antd/es/layout/layout';
-import { TableRoutes } from './components/TableRoutes';
-import { MapBlock } from './components/MapBlock';
+import { TableRoutes } from './TableRoutes';
+import { MapBlock } from './MapBlock';
 
 function App() {
   return (

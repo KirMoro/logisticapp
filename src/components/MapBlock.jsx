@@ -2,7 +2,7 @@ import {
   Marker, Polyline, TileLayer, MapContainer,
 } from 'react-leaflet';
 import Leaflet from 'leaflet';
-import '../MapContainer.css';
+import './MapContainer.css';
 import { useSelector } from 'react-redux';
 import { Empty } from 'antd';
 
