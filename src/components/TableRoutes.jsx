@@ -33,21 +33,19 @@ export const TableRoutes = () => {
     <Table
       rowSelection={{
         type: 'checkbox',
-        onSelect: (record, selectedRow) => {
-          if (selectedRow) {
-            dispatch(getRoute(record));
-          } else {
-            dispatch((removeRoute({})));
-          }
-        },
+        onSelect: (record, selectedRow) => (
+          selectedRow ? dispatch(getRoute(record)) : dispatch((removeRoute({})))
+        ),
         onChange: (selectedRows) => {
           if (selectedRows.length > 1) {
             selectedRows.shift();
+            dispatch((removeRoute({})));
           }
         },
       }}
       columns={columns}
       dataSource={tableData}
+      pagination={false}
     />
   );
 };

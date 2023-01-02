@@ -16,11 +16,11 @@ export const MapBlock = () => {
           zoom={14}
           scrollWheelZoom={false}
           bounds={
-          Leaflet.latLngBounds(
-            [coordinates.from.latitude, coordinates.from.longitude],
-            [coordinates.to.latitude, coordinates.to.longitude],
-          )
-}
+            Leaflet.latLngBounds(
+              [coordinates.from.latitude, coordinates.from.longitude],
+              [coordinates.to.latitude, coordinates.to.longitude],
+            )
+          }
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
