@@ -1,7 +1,6 @@
 import { Table } from 'antd';
-import { useDispatch } from 'react-redux';
-import { getRoute, removeRoute } from '../redux/action';
-import { tableData } from '../__fixtures__/tableData';
+import {useDispatch, useSelector} from 'react-redux';
+import {getRoute, removeRoute, setTableData} from '../redux/action';
 
 const columns = [
   {
@@ -28,6 +27,7 @@ const columns = [
 
 export const TableRoutes = () => {
   const dispatch = useDispatch();
+  const tableData = useSelector((state) => state.tableData);
 
   return (
     <Table

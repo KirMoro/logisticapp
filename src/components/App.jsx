@@ -1,9 +1,19 @@
+import {useEffect} from "react";
 import { Col, Layout, Row } from 'antd';
 import { Content, Header } from 'antd/es/layout/layout';
 import { TableRoutes } from './TableRoutes';
 import { MapBlock } from './MapBlock';
+import {useDispatch} from "react-redux";
+import {setTableData} from "../redux/action";
+import {tableData} from "../__fixtures__/tableData";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setTableData(tableData));
+  }, [tableData]);
+
   return (
     <Layout>
       <Header />

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { routeData } from './reducer';
+import { routeData, tableData } from './reducer';
 
 export default combineReducers({
-  routeData,
+  routeData, tableData,
 });
